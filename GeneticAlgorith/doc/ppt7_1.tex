@@ -23,7 +23,7 @@
 \usepackage{tikz}
 \usepackage{graphicx}
 \usepackage{hyperref}
-%\usepackage{zhlipsum}
+\usepackage{zhlipsum}
 \usepackage{algorithm,algorithmic}
 \usetikzlibrary{positioning, shapes.geometric}
 \newtheorem*{mathmodle}{数学模型}
@@ -105,7 +105,7 @@
 		\frametitle{算法性能测试函数}
 	\begin{definition}[De Jong 函数F3]
 		\begin{eqnarray*}
-			&f_3(x_1,\cdots,x_5)=\sum_{i-1}^{5}[x_1]\\
+			&f_3(x_1,\cdots,x_5)=\sum_{i=1}^{5}[x_i]\\
 			&-5.12\le x_i \le 5.12 \,\,\,i=1,2,3,4,5		
 		\end{eqnarray*}
 		$[\,\cdot \,]$为向下取整函数
@@ -271,8 +271,10 @@
 		\begin{definition}[小生境数]
 			$m_X=\underset{Y\in P}{\sum} s(d(X,Y))$, $s(d)$为共享函数,关于$d$单调递减.
 		\end{definition}
-	
-		
+	一般取$s(d)=\left\{\begin{array}{c}
+		(1-\frac{d}{\sigma})^\alpha, \,\, 0\le d \le \sigma\\
+		0, \,\, d>\sigma\end{array}
+		\right.$,其中$\sigma$为共享半径, $\alpha=1$或$2$为共享函数的形状参数.
 	
 	\end{frame}
 	\begin{frame}
